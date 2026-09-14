@@ -11,7 +11,7 @@ const pillars = [
 function Brand() {
   return (
     <span className="brand" aria-label="PARPERPIR">
-      <Image src="/simbolo-parperpir.svg" alt="" width={28} height={24} priority />
+      <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/simbolo-parperpir.svg`} alt="" width={28} height={24} priority />
       <span className="brand-copy">
         <strong>PARPERPIR</strong>
         <small>Nuestro Universo de Inversión</small>

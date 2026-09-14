@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: '/' },
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.svg` },
   openGraph: { type: 'website', locale: 'es_ES', url: '/', siteName: 'PARPERPIR', title, description },
   twitter: { card: 'summary', title, description },
 };
