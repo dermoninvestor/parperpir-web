@@ -22,3 +22,20 @@ npm run start
 ```
 
 La configuración de despliegue está en `.openai/hosting.json`. El dominio y el DNS deben configurarse desde el proveedor de hosting elegido; este proyecto no contiene credenciales ni configuración de producción.
+
+## GitHub Pages
+
+`npm run build:pages` genera una versión estática en `dist/client` con HTML,
+estilos, JavaScript, imágenes y fuentes. No requiere servidor ni secretos.
+El flujo `.github/workflows/pages.yml` publica automáticamente cada cambio en
+`main` y permite publicar manualmente desde GitHub Actions.
+
+En Settings → Pages, la fuente debe ser GitHub Actions. El dominio principal
+es `parperpir.es`; tras configurar los DNS y emitirse el certificado, activar
+Enforce HTTPS. El flujo obtiene la ruta de publicación de GitHub para servir
+tanto la dirección temporal del repositorio como el dominio propio.
+
+El DNS se mantiene en DonDominio: el ANAME del dominio raíz y el CNAME de
+`www` deben apuntar a `dermoninvestor.github.io` (sin ruta ni protocolo).
+La aplicación privada mantiene su registro `app` apuntando a Railway.
+No es necesario cambiar los servidores DNS ni los registros del correo.
