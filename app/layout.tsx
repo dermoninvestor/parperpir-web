@@ -25,5 +25,5 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="es" className={`${inter.variable} ${playfair.variable}`}><body>{children}</body></html>;
+  return <html lang="es" className={`${inter.variable} ${playfair.variable}`}><body>{children}<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "f3ecc7a4b1e44eff91d2cd33833c0f01"}'></script></body></html>;
 }
